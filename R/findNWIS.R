@@ -28,7 +28,7 @@ findNWIS = function(AOI = NULL, siteType = "ST", paramCode = "00060", startDate 
   if(!(class(AOI) %in% c("list","HydroData"))){AOI = list(AOI = AOI)}
 
   if(all(!is.null(startDate), is.null(endDate))){ endDate = Sys.Date() - 1}
-  bb = round(AOI::bbox_st(AOI$AOI), 7)
+  bb = round(AOI::bbox_coords(AOI$AOI), 7)
 
   url = paste0("https://waterservices.usgs.gov/nwis/site/?format=mapper&bBox=",
                bb$xmin, ",", bb$ymin, ",", bb$xmax, ",", bb$ymax,

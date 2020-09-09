@@ -38,7 +38,7 @@ query_cida = function(AOI = NULL, type, spatial = TRUE, filter = NULL){
 
   if(!is.null(AOI)){
 
-    bb = AOI::bbox_st(AOI)
+    bb = AOI::bbox_coords(AOI)
 
     clipFilter =  paste0('<ogc:BBOX>',
                          '<ogc:PropertyName>the_geom</ogc:PropertyName>',

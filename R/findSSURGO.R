@@ -20,7 +20,7 @@ findSSURGO <- function(AOI) {
 
   if (!(class(AOI) %in% c("list", "HydroData"))) {AOI = list(AOI = AOI)}
 
-  bb.st = AOI::bbox_st(AOI$AOI)
+  bb.st = AOI::bbox_coords(AOI$AOI)
   AOI.sf = sf::st_as_sf(AOI$AOI)
   AOI.sf = sf::st_transform(AOI.sf, "+proj=longlat +datum=WGS84")
 
@@ -35,7 +35,7 @@ findSSURGO <- function(AOI) {
   cat(crayon::cyan("Locating regions\n"))
 
   for (i in seq_along(grid)) {
-    bound <- grid[i] %>% AOI::bbox_st()
+    bound <- grid[i] %>% AOI::bbox_coords()
     url <-
       paste0(
         "https://sdmdataaccess.nrcs.usda.gov/Spatial/SDMNAD83Geographic.wfs?Service=WFS&Version=1.0.0&Request=GetFeature&Typename=SurveyAreaPoly&BBOX=",

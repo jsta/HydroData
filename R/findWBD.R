@@ -50,7 +50,7 @@ findWBD = function(AOI,
 
   if(subbasins) { level =  seq(level, 12, 2) }
 
-  bb = AOI::bbox_st(sp::spTransform(AOI$AOI, '+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs'))
+  bb = AOI::bbox_coords(sp::spTransform(AOI$AOI, '+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext  +no_defs'))
   bb.ordered =  paste(bb$xmin,bb$ymin,bb$xmax,bb$ymax, sep = "%2C")
 
   ref = data.frame(huc = seq(2,12,2), endpoint = 1:6)

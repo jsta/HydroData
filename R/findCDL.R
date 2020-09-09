@@ -21,7 +21,7 @@ findCDL = function(AOI, year = 2017){
 
    cld.proj = "+proj=aea +lat_1=29.5 +lat_2=45.5 +lat_0=23 +lon_0=-96 +x_0=0 +y_0=0 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs"
 
-   shp.p = sf::st_transform(sf::st_as_sf(AOI$AOI), cld.proj) %>% AOI::bbox_st()
+   shp.p = sf::st_transform(sf::st_as_sf(AOI$AOI), cld.proj) %>% AOI::bbox_coords()
 
    bb = paste(shp.p$xmin,shp.p$ymin, shp.p$xmax,shp.p$ymax, sep = ',')
 

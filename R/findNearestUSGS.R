@@ -1,4 +1,4 @@
-#' @title Find Neareast NWIS stations
+#' @title Find Nearest NWIS stations
 #' @description \code{findNearestNWIS} returns a \code{SpatialPointsDataFrame} of the 'n' number of NWIS gages closest to a declared point.
 #' @param point a point described by lat/long, can be piped from \link[AOI]{geocode}
 #' @param n the number of NWIS gages to find (default = 5)
@@ -49,6 +49,3 @@ findNearestNWIS = function(point = NULL, n = 5, ids = FALSE, bb = FALSE, ...) {
 
   return(fin)
 }
-
-
-
