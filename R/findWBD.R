@@ -15,7 +15,7 @@
 #'   Watershed \tab 10 \tab 227 \tab Upper Imnaha River \tab 1706010201 \cr
 #'   Subwatershed \tab 12 \tab 40 \tab North Fork Imnaha River \tab 170601020101 \cr
 #' }
-#' @param AOI  A Spatial* or simple features geometry, can be piped from \link[AOI]{getAOI}
+#' @param AOI  A Spatial* or simple features geometry, can be piped from \link[AOI]{aoi_get}
 #' @param level defines the HUC level of interest (default = 8)
 #' @param subbasins If TRUE, all subbasins of the supplied level will be joined to retuned list
 #' @param crop If TRUE, all objects are cropped to the AOI boundaries (default = \code{TRUE})
@@ -24,16 +24,16 @@
 #' @examples
 #' \dontrun{
 #' # Get Cropped HUC8s for AOI
-#'  getAOI(list("UCSB", 10, 10)) %>% findWBD()
+#'  aoi_get(list("UCSB", 10, 10)) %>% findWBD()
 #'
 #'# Get Cropped HUC10s for AOI
-#'  getAOI(list("UCSB", 10, 10)) %>% findWBD(level = 10)
+#'  aoi_get(list("UCSB", 10, 10)) %>% findWBD(level = 10)
 #'
 #'# Get Cropped HUC8s, HUC10s and HUC12s for AOI
-#'  getAOI(clip = list("UCSB", 10, 10)) %>% findWBD(level = 8, subbasins = TRUE)
+#'  aoi_get(clip = list("UCSB", 10, 10)) %>% findWBD(level = 8, subbasins = TRUE)
 #'
 #'# Get uncropped HUC10s for AOI
-#'  getAOI(clip = list("UCSB", 10, 10)) %>% findWBD(level = 10, crop = FALSE)
+#'  aoi_get(clip = list("UCSB", 10, 10)) %>% findWBD(level = 10, crop = FALSE)
 #' }
 #' @author
 #' Mike Johnson

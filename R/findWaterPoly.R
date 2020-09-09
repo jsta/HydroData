@@ -7,7 +7,7 @@
 #' @author Mike Johnson
 #' @examples
 #' \dontrun{
-#' getAOI(state = 'CO', county = 'El Paso') %>% findWaterPoly()
+#' aoi_get(state = 'CO', county = 'El Paso') %>% findWaterPoly()
 #' }
 #' @export
 #'

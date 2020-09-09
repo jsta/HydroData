@@ -23,7 +23,7 @@ findNearestCOMID = function(point = NULL, n = 5, ids = FALSE, streamorder = NULL
   while (dim(lines)[1] < n) {
     lines <-  suppressWarnings(
       findNHD(
-        AOI = suppressMessages(AOI::getAOI( clip = list(point$lat, point$lon, h, w ))),
+        AOI = suppressMessages(AOI::aoi_get( clip = list(point$lat, point$lon, h, w ))),
         streamorder = streamorder)
     )
 

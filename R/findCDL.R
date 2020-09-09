@@ -5,8 +5,8 @@
 #' @return a list() of minimum length 2: AOI and cld
 #' @examples
 #' \dontrun{
-#'  dt = getAOI(clip = list("Devil Tower")) %>% findCDL()
-#'  dt = getAOI(clip = list("Devil Tower")) %>% findCDL(2011:2016)
+#'  dt = aoi_get(clip = list("Devil Tower")) %>% findCDL()
+#'  dt = aoi_get(clip = list("Devil Tower")) %>% findCDL(2011:2016)
 #' }
 #' @author Mike Johnson
 #' @export

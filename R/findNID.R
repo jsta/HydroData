@@ -22,7 +22,7 @@
 #' @examples
 #' \dontrun{
 #' # Find all dams in Texas
-#' tx.dams = getAOI(state = "TX") %>% findNID()
+#' tx.dams = aoi_get(state = "TX") %>% findNID()
 #'}
 #' @author Mike Johnson
 #' @export

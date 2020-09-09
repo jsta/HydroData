@@ -29,17 +29,17 @@
 #' \item 'perimeter'   : \code{character}  Basein Parameters
 #' \item 'gage_id'   : \code{numeric}    USGS NWIS Station ID
 #' }
-#' @param AOI A Spatial* or simple features geometry, can be piped from \link[AOI]{getAOI}
+#' @param AOI A Spatial* or simple features geometry, can be piped from \link[AOI]{aoi_get}
 #' @param basins If TRUE, returns a list of GAGESII basin in addition
 #' @param ids If TRUE, a vector of gage IDs is added to retuned list (default = \code{FALSE})
 #' @return a list() of minimum length 2: AOI and gagesII
 #' @examples
 #' \dontrun{
 #' #Get GAGESII outlets for AOI
-#' bas = getAOI(clip = list("UCSB", 10, 10)) %>%  findGAGESII()
+#' bas = aoi_get(clip = list("UCSB", 10, 10)) %>%  findGAGESII()
 #'
 #' #Get GAGESII outlets and basins for AOI
-#' bas = getAOI(clip = list("UCSB", 10, 10)) %>%  findGAGESII(basins = TRUE)
+#' bas = aoi_get(clip = list("UCSB", 10, 10)) %>%  findGAGESII(basins = TRUE)
 #' }
 #' @author Mike Johnson
 #' @export

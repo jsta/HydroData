@@ -10,13 +10,13 @@
 #' \item 'lat_reachCent'    : \code{numeric}    Latitude of the reach center, decimil degrees
 #' \item 'lon_reachCent'    : \code{numeric}    Longitude of the reach center, decimil degrees
 #' }
-#' @param AOI A Spatial* or simple features geometry, can be piped from \link[AOI]{getAOI}
+#' @param AOI A Spatial* or simple features geometry, can be piped from \link[AOI]{aoi_get}
 #' @param ids If TRUE, a vector of NIWS gage IDs are added to retuned list (default = \code{FALSE})
 #' @param comids f TRUE, a vector of NHD COMIDs IDs are added to retuned list (default = \code{FALSE})
 #' @return a list() of minimum length 2: AOI and nwis
 #' @examples
 #' \dontrun{
-#' co = getAOI(state = "CO") %>% findNWIS()
+#' co = aoi_get(state = "CO") %>% findNWIS()
 #' }
 #' @author Mike Johnson
 #' @export

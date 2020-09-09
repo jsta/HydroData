@@ -2,15 +2,15 @@
 #' @description \code{findNLCD} returns \code{Raster} land cover data from the National Land Cover Dataset (\href{https://www.mrlc.gov}{NLCD}) for an AOI.
 #' Data comes the the USA National Map and is avaialble for years 2001, 2006, 2011.
 #' In additon to landcover, users can get data reflecting impervious surface and conaopy cover.
-#' @param AOI A Spatial* or simple features geometry, can be piped from \link[AOI]{getAOI}
+#' @param AOI A Spatial* or simple features geometry, can be piped from \link[AOI]{aoi_get}
 #' @param year the year(s) to download. Options include 2001, 2006, 2011. Default = 2011
 #' @param type the type of data to downlaod. Options include landcover, canopy, and impervious. Default = landcover
 #' @return a list() of minimum length 2: AOI and NLCD
 #' @examples
 #' \dontrun{
-#'  dt = getAOI(clip = list("Devil Tower")) %>% findNLDC(2006, 'landcover')
-#'  dt = getAOI(clip = list("Devil Tower")) %>% findNLDC(2011, 'canopy')
-#'  dt = getAOI(clip = list("Devil Tower")) %>% findNLDC(2011, 'impervious')
+#'  dt = aoi_get(clip = list("Devil Tower")) %>% findNLDC(2006, 'landcover')
+#'  dt = aoi_get(clip = list("Devil Tower")) %>% findNLDC(2011, 'canopy')
+#'  dt = aoi_get(clip = list("Devil Tower")) %>% findNLDC(2011, 'impervious')
 #' }
 #' @author Mike Johnson
 #' @export

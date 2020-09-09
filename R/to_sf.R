@@ -5,7 +5,7 @@
 #' @return a list with the same length as the input
 #' @examples
 #' \dontrun{
-#' AOI = getAOI(clip = 'UCSB') %>% findNED %>% findNHD %>% findNWIS %>% to_sf
+#' AOI = aoi_get(clip = 'UCSB') %>% findNED %>% findNHD %>% findNWIS %>% to_sf
 #' }
 #' @export
 #' @author Mike Johnson

@@ -1,12 +1,12 @@
 #' @title Find National Elevation Data (NED)
 #' @description \code{findNED} returns \code{Raster} elevation data from the National Elevation Dataset (\href{https://nationalmap.gov/elevation.html}{NED}) for an AOI.
 #' Data comes the the USA National Map.
-#' @param AOI  A Spatial* or simple features geometry, can be piped from \link[AOI]{getAOI}
+#' @param AOI  A Spatial* or simple features geometry, can be piped from \link[AOI]{aoi_get}
 #' @param res resolution of NED data. 1 equals 1 arc second, 13 equals 1/3 arc second.
 #' @return a list() of minimum length 2: AOI and NED
 #' @examples
 #' \dontrun{
-#'  el.paso.elev = getAOI(state = "CO", county = "El Paso") %>% findNED(res = 1)
+#'  el.paso.elev = aoi_get(state = "CO", county = "El Paso") %>% findNED(res = 1)
 #' }
 #' @author Mike Johnson
 #' @export

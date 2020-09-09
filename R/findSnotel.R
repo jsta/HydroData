@@ -15,11 +15,11 @@
 #' \item 'HUC12.NAME': \code{character}  The HUC12 name the station is located in
 #' \item 'HUC12.ID': \code{character}  The HUC12 ID the station is located in
 #' }
-#' @param AOI  A Spatial* or simple features geometry, can be piped from \link[AOI]{getAOI}
+#' @param AOI  A Spatial* or simple features geometry, can be piped from \link[AOI]{aoi_get}
 #' @param ids  If TRUE,  a vector of NHD COMIDs is added to retuned list (default = \code{FALSE})
 #' @examples
 #' \dontrun{
-#' CA.sno = getAOI(state = 'CA') %>% findSnotel()
+#' CA.sno = aoi_get(state = 'CA') %>% findSnotel()
 #'}
 #' @export
 #' @author

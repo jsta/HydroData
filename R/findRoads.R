@@ -16,11 +16,11 @@
 #' \item S1200   Secondary Road
 #' }
 #' }
-#' @param AOI A Spatial* or simple features geometry, can be piped from \link[AOI]{getAOI}
+#' @param AOI A Spatial* or simple features geometry, can be piped from \link[AOI]{aoi_get}
 #' @return a list() of minimum length 2: AOI and tiger
 #' @examples
 #' \dontrun{
-#' AOI  = getAOI(clip = list("UCSB", 10, 10)) %>% findRoads()
+#' AOI  = aoi_get(clip = list("UCSB", 10, 10)) %>% findRoads()
 #' }
 #' @author Mike Johnson
 #' @export

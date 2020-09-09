@@ -12,14 +12,14 @@
 #' \item 'maxdepth'   : \code{character}     Maximum depth of waterbody
 #' \item 'meanused'   : \code{integer}  The average amount of water used
 #' }
-#' @param AOI A Spatial* or simple features geometry, can be piped from \link[AOI]{getAOI}
+#' @param AOI A Spatial* or simple features geometry, can be piped from \link[AOI]{aoi_get}
 #' @param ids If TRUE, a vector of waterbody IDs is added to retuned list (default = \code{FALSE})
 #' @return a list() of minimum length 2: AOI and waterboies
 #' @export
 #' @author Mike Johnson
 #' @examples
 #' \dontrun{
-#' getAOI(clip = "Tuscaloosa") %>% findWaterbodies()
+#' aoi_get(clip = "Tuscaloosa") %>% findWaterbodies()
 #' }
 #'
 

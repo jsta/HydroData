@@ -24,7 +24,7 @@ findNearestAirports = function(point = NULL, n = 5, ids = FALSE, bb = FALSE){
   dist = dist[order(dist$Distance_km)[1:n],]
 
   fin[['ap']] = sf::as_Spatial(merge(df, dist, by = "ICAO"))
-  if (bb) { fin[["AOI"]] = AOI::getBoundingBox(fin$ap) }
+  if (bb) { fin[["AOI"]] = AOI::bbox_get(fin$ap) }
   if (ids) { fin[["ICAO"]] = unique(fin$closest_ap$ICAO) }
 
   return(fin)

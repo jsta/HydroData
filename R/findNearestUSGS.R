@@ -23,7 +23,7 @@ findNearestNWIS = function(point = NULL, n = 5, ids = FALSE, bb = FALSE, ...) {
   while (dim(sta)[1] < n) {
     sta <-  suppressWarnings(
       findNWIS(
-        AOI = AOI::getAOI( clip = list(point$lat, point$lon, h, w )), ... )
+        AOI = AOI::aoi_get( clip = list(point$lat, point$lon, h, w )), ... )
     )
 
     sta = sta[['nwis']]
