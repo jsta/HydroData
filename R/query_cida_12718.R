@@ -23,7 +23,7 @@ query_cida = function(AOI = NULL, type, spatial = TRUE, filter = NULL){
 
                   stringsAsFactors = F)
 
-  if(!(type %in% df$type)) { stop(paste("Name not avalaile must be one of:", paste(df$type, collapse = ", "))) }
+  if(!(type %in% df$type)) { stop(paste("Name not available must be one of:", paste(df$type, collapse = ", "))) }
 
   call = df[which(df$type == type),]
 
